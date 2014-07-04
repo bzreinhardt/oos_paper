@@ -1,7 +1,18 @@
+\documentclass{article}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{url}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+
 For N arrays in this special orientation, the transformation between the angular speeds of the arrays and the net force and torque on the spacecraft is:
 \begin{equation}\label{eq:forces}
 \end{equation}
-In (1) C is a matrix of constants that take the angular velocities to forces and torques. These constants will vary‎with‎the‎distance‎to‎the‎target‎and‎the‎target’s‎ properties.
+In (1) C is a matrix of constants that take the angular velocities to forces and torques. These constants will vary ‎with‎the‎distance‎to‎the‎target‎and‎the‎target’s‎ properties.
 The Jacobian J is the geometry-dependent matrix from (1):
 \begin{equation}\label{eq:genJacobian}
 \end{equation}
@@ -24,3 +35,5 @@ and
 
 This Jacobian ignores the constants scaling Fx, Fy, and‎τ‎ based on the system state and physical constants of the target.
 An induction coupler of this type on a 4 kg spherical spacecraft of radius 0.1m, can generate a linear acceleration of about 2×10-3 m/s2 and an angular acceleration of 9×10-3 rad/s2. These values, while modest, allow an inspection vehicle to overcome perturbation forces and move slowly over the surface of the ISS to inspect it. These values are based on a small prototype comprised of COTS components and an induction coupler with only three magnet arrays. Using additional arrays and optimizing the hardware are two straightforward ways to increase the capabilities in this example.
+
+\end{document}
