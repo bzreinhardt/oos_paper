@@ -1,0 +1,19 @@
+\subsection{Induced Current Forces}
+
+An induction coupler generates an eddy-current force that acts between itself and a target. Eddy-current forces start with a time-varying magnetic field. The field induces an electrical eddy current in a conductive target. In turn, that induced current interacts with the magnetic field and produces force between the conductive target and the source of the magnetic field.
+In broad strokes, the generation of eddy-current forces is a straightforward manifestation of Maxwell's
+equations.
+‎
+\begin{enumerate}
+\item Any material with finite conductivity experiences a voltage gradient in response to a time-varying magnetic field.
+\item The voltage difference drives a current through the material. This current flows in a direction to cancel the change in the magnetic field with a time delay.
+\item This induced current acts like the familiar example of a wire in a magnetic field, and experiences a force.
+\end{enumerate}
+ 
+All such approaches place requirements for specific hardware on both the chaser and the target (that is, the target must have launched with certain features already in place.) However, no spacecraft currently in orbit meet these criteria, to the
+
+These steps give intuition for the physical process, but they are a gross oversimplification. More generally, the currents in the conductor depend on the geometry of the material, material properties, the direction and magnitude of the changes in the magnets in the induction coupler, and the velocity of the target relative to the induction coupler. In fact, the force depends not just on the current, but also on the magnetic field's magnitude and direction. Compounding the subtlety is the unavoidable coupling between the magnetic field and the kinematics of the magnets in the induction coupler. These interdependencies make the force sensitive to the state of the system. Induction couplers exhibit many nonlinearities, which demand a rigorous and informed approach to implementing the technology.
+
+Induction couplers can produce force in any direction relative to the target, for example both tangential and perpendicular to a surface on that target. Therefore, a small spacecraft generating a time-varying magnetic field could produce forces in all three translational degrees of freedom. Extending that idea, two induction couplers separated by a moment arm could also produce torques to orient the spacecraft.
+
+There are two ways for an induction coupler to generate its changing magnetic fields and resultant forces. While both moving permanent magnets and variable electromagnets can generate those forces, each kind of magnet is especially good at producing different sorts of force. A single electromagnet with a sinusoidal driving current can always produce a repulsive force between itself and the target. Replicating that force with a permanent magnet would require either a closed-loop linear actuator or a complicated set of linkages. Similarly, a simple permanent magnet mounted on a motor shaft easily produces horizontal shear forcesbetween itself and the target, a force that is hard to replicate with electromagnets. It isn't yet clear which combination of permanent and electromagnets optimally generates 6-degree-of-freedom (DoF) forces. There may not be an optimal configuration. Instead, the composition of the magnets in an induction coupler may depend on the mission profile - different for an inspection vehicle operating near the surface of a large target than a free-flier maneuvering near a smaller target. This paper focuses primarily on the former.
